@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <!-- Autowire byName -->
+   <bean id="application" class="com.java.autowire.byType.xml.Application" autowire="byType"/>
+   
+   <!-- Participate in autowire -->
+   <bean id="appUser" class="com.java.autowire.byType.xml.ApplicationUser">
+   	<property name="name" value="Zensar"/>
+   </bean>
+   
+   <!-- NOT Participate in autowire autowire-candidate="false"-->
+   <bean id="appUserr" class="com.java.autowire.byType.xml.ApplicationUser" autowire-candidate="false">
+   	<property name="name" value="PA"/>
+   </bean>
+</beans>

@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id="parentBean" class="com.java.spring.bean.inherit.ParentBean">
+   	<property name="property1" value="Parent Message One"/>
+   	<property name="property2" value="Parent Message Two"/>
+   	<property name="property3" value="Parent Message Three"/>
+   </bean>
+   
+   <bean id="childBean" class="com.java.spring.bean.inherit.ChildBean" parent="parentBean">
+   	<!-- <property name="property1" value="Child Message One"/> -->
+   	<property name="property2" value="Child Message Two"/>
+   </bean>
+</beans>
